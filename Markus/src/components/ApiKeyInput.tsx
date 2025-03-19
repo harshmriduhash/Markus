@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useAppStore } from '../store/appStore';
-import { Eye, EyeOff, Key } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useAppStore } from "../store/appStore";
+import { Eye, EyeOff, Key } from "lucide-react";
 
 const ApiKeyInput: React.FC = () => {
   const { apiKey, setApiKey, selectedModel } = useAppStore();
@@ -10,7 +10,7 @@ const ApiKeyInput: React.FC = () => {
   const toggleShowKey = () => setShowKey(!showKey);
 
   return (
-    <motion.div 
+    <motion.div
       className="mb-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -22,10 +22,12 @@ const ApiKeyInput: React.FC = () => {
           <Key size={18} />
         </div>
         <input
-          type={showKey ? 'text' : 'password'}
+          type={showKey ? "text" : "password"}
           value={apiKey}
           onChange={(e) => setApiKey(e.target.value)}
-          placeholder={`Enter your ${selectedModel?.name || 'AI model'} API key`}
+          placeholder={`Enter your ${
+            selectedModel?.name || "AI model"
+          } API key`}
           className="w-full pl-10 pr-10 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
         />
         <button
