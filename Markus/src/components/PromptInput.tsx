@@ -1,10 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useAppStore } from '../store/appStore';
-import { Wand2, RotateCcw } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useAppStore } from "../store/appStore";
+import { Wand2, RotateCcw } from "lucide-react";
 
 const PromptInput: React.FC = () => {
-  const { prompt, setPrompt, generateCode, isGenerating, clearGeneration } = useAppStore();
+  const { prompt, setPrompt, generateCode, isGenerating, clearGeneration } =
+    useAppStore();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,17 +14,19 @@ const PromptInput: React.FC = () => {
 
   const handleReset = () => {
     clearGeneration();
-    setPrompt('');
+    setPrompt("");
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="mb-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <h2 className="text-lg font-semibold mb-3 text-white">Describe Your Web App</h2>
+      <h2 className="text-lg font-semibold mb-3 text-white">
+        Describe Your Web App
+      </h2>
       <form onSubmit={handleSubmit}>
         <textarea
           value={prompt}
@@ -40,8 +43,8 @@ const PromptInput: React.FC = () => {
               type="button"
               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
                 isGenerating
-                  ? 'bg-dark-600 text-gray-400 cursor-not-allowed'
-                  : 'bg-dark-700 text-gray-300 hover:bg-dark-600'
+                  ? "bg-dark-600 text-gray-400 cursor-not-allowed"
+                  : "bg-dark-700 text-gray-300 hover:bg-dark-600"
               } transition-colors`}
               whileHover={!isGenerating ? { scale: 1.05 } : {}}
               whileTap={!isGenerating ? { scale: 0.95 } : {}}
@@ -55,15 +58,18 @@ const PromptInput: React.FC = () => {
               type="submit"
               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
                 isGenerating
-                  ? 'bg-dark-600 text-gray-400 cursor-not-allowed'
-                  : 'bg-primary-600 text-white hover:bg-primary-500'
+                  ? "bg-dark-600 text-gray-400 cursor-not-allowed"
+                  : "bg-primary-600 text-white hover:bg-primary-500"
               } transition-colors`}
               whileHover={!isGenerating ? { scale: 1.05 } : {}}
               whileTap={!isGenerating ? { scale: 0.95 } : {}}
               disabled={isGenerating}
             >
-              <Wand2 size={18} className={isGenerating ? 'animate-pulse' : ''} />
-              <span>{isGenerating ? 'Generating...' : 'Generate'}</span>
+              <Wand2
+                size={18}
+                className={isGenerating ? "animate-pulse" : ""}
+              />
+              <span>{isGenerating ? "Generating..." : "Generate"}</span>
             </motion.button>
           </div>
         </div>
