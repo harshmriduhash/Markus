@@ -1,0 +1,64 @@
+/* VS Code Dark Plus Theme Syntax Highlighting */
+    .hljs {
+      background: #1e1e1e;
+      color: #d4d4d4;
+    }
+
+    .hljs-comment,
+    .hljs-quote {
+      color: #6a9955;
+      font-style: italic;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-attribute,
+    .hljs-name,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-regexp,
+    .hljs-link {
+      color: #569cd6;
+    }
+
+    .hljs-number,
+    .hljs-literal,
+    .hljs-built_in,
+    .hljs-bullet {
+      color: #b8d7a3;
+    }
+
+    .hljs-string,
+    .hljs-symbol,
+    .hljs-attribute {
+      color: #d69d85;
+    }
+
+    .hljs-title,
+    .hljs-section {
+      color: #4ec9b0;
+    }
+
+    .hljs-type,
+    .hljs-params {
+      color: #d4d4d4;
+    }
+
+    .hljs-meta,
+    .hljs-function,
+    .hljs-deletion,
+    .hljs-addition {
+      color: #9cdcfe;
+    }
+
+    .hljs-tag {
+      color: #808080;
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .hljs-strong {
+      font-weight: bold;
+    }
