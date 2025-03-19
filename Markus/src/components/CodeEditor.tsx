@@ -1,18 +1,18 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { Code, Play, ExternalLink, X } from 'lucide-react';
-import AceEditor from 'react-ace';
+import React, { useState, useEffect, useCallback } from "react";
+import { motion } from "framer-motion";
+import { Code, Play, ExternalLink, X } from "lucide-react";
+import AceEditor from "react-ace";
 
-import 'ace-builds/src-noconflict/mode-html';
-import 'ace-builds/src-noconflict/mode-css';
-import 'ace-builds/src-noconflict/mode-javascript';
-import 'ace-builds/src-noconflict/theme-dracula';
+import "ace-builds/src-noconflict/mode-html";
+import "ace-builds/src-noconflict/mode-css";
+import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/theme-dracula";
 
 const CodeEditor: React.FC = () => {
-  const [html, setHtml] = useState('');
-  const [css, setCss] = useState('');
-  const [js, setJs] = useState('');
-  const [srcDoc, setSrcDoc] = useState('');
+  const [html, setHtml] = useState("");
+  const [css, setCss] = useState("");
+  const [js, setJs] = useState("");
+  const [srcDoc, setSrcDoc] = useState("");
 
   useEffect(() => {
     setHtml(`<!DOCTYPE html>
@@ -104,9 +104,9 @@ body {
   }, [html, css, js]);
 
   const clearEditor = () => {
-    setHtml('');
-    setCss('');
-    setJs('');
+    setHtml("");
+    setCss("");
+    setJs("");
   };
 
   return (
@@ -142,7 +142,9 @@ body {
 
       <div className="flex-1 flex flex-col lg:flex-row gap-4">
         <div className="flex flex-col flex-1">
-          <h3 className="text-md font-semibold text-gray-300 mb-2">index.html</h3>
+          <h3 className="text-md font-semibold text-gray-300 mb-2">
+            index.html
+          </h3>
           <AceEditor
             mode="html"
             theme="dracula"
@@ -150,12 +152,18 @@ body {
             value={html}
             name="html-editor"
             editorProps={{ $blockScrolling: true }}
-            style={{ height: '300px', width: '100%', backgroundColor: '#1A1A1A' }}
+            style={{
+              height: "300px",
+              width: "100%",
+              backgroundColor: "#1A1A1A",
+            }}
           />
         </div>
 
         <div className="flex flex-col flex-1">
-          <h3 className="text-md font-semibold text-gray-300 mb-2">styles.css</h3>
+          <h3 className="text-md font-semibold text-gray-300 mb-2">
+            styles.css
+          </h3>
           <AceEditor
             mode="css"
             theme="dracula"
@@ -163,12 +171,18 @@ body {
             value={css}
             name="css-editor"
             editorProps={{ $blockScrolling: true }}
-            style={{ height: '300px', width: '100%', backgroundColor: '#1A1A1A' }}
+            style={{
+              height: "300px",
+              width: "100%",
+              backgroundColor: "#1A1A1A",
+            }}
           />
         </div>
 
         <div className="flex flex-col flex-1">
-          <h3 className="text-md font-semibold text-gray-300 mb-2">script.js</h3>
+          <h3 className="text-md font-semibold text-gray-300 mb-2">
+            script.js
+          </h3>
           <AceEditor
             mode="javascript"
             theme="dracula"
@@ -176,7 +190,11 @@ body {
             value={js}
             name="js-editor"
             editorProps={{ $blockScrolling: true }}
-            style={{ height: '300px', width: '100%', backgroundColor: '#1A1A1A' }}
+            style={{
+              height: "300px",
+              width: "100%",
+              backgroundColor: "#1A1A1A",
+            }}
           />
         </div>
       </div>

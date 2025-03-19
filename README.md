@@ -25,3 +25,45 @@ Markus Code is ideal for:
 - **Startups**: Quickly develop MVPs to validate business ideas.
 - **Developers**: Accelerate the development process with AI-assisted coding.
 - **Educators and Students**: Learn and teach web development concepts interactively.
+
+## Upcoming features:-
+User Authentication:
+
+Implement user authentication using a service like Firebase or Auth0.
+Add login, registration, and password reset functionalities.
+User Profiles:
+
+Allow users to create and manage their profiles.
+Implement profile editing and viewing features.
+Project Management:
+
+Enable users to create, edit, and delete projects.
+Implement project listing and detailed view pages.
+Collaboration Tools:
+
+Add real-time collaboration features using WebSockets or Firebase.
+Allow multiple users to work on the same project simultaneously.
+Code Snippets Library:
+
+Create a library of reusable code snippets.
+Allow users to save and manage their own snippets.
+Advanced Code Editor Features:
+
+Implement syntax highlighting for more languages.
+Add code linting and formatting tools.
+Deployment Integration:
+
+Integrate with deployment platforms like Vercel or Netlify.
+Allow users to deploy their projects directly from the app.
+Analytics Dashboard:
+
+Provide analytics and usage statistics for user projects.
+Implement visualizations for data insights.
+Premium Features:
+
+Add premium features such as advanced AI models or additional storage.
+Implement a subscription management system.
+Documentation and Tutorials:
+
+Create a comprehensive documentation section.
+Add interactive tutorials and guides for new users.
