@@ -1,6 +1,6 @@
-import React from 'react';
-import { Crown } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Crown } from "lucide-react";
+import { motion } from "framer-motion";
 
 const GetPremium = () => {
   const containerVariants = {
@@ -10,9 +10,9 @@ const GetPremium = () => {
       transition: {
         duration: 0.5,
         delay: 0.2,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   return (
@@ -23,13 +23,20 @@ const GetPremium = () => {
       animate="visible"
     >
       <h1 className="text-3xl font-bold text-white flex flex-col sm:flex-row items-start sm:items-center">
-        <span style={{ color: '#ffc857' }}>Get Markus Code</span>
+        <span style={{ color: "#ffc857" }}>Get Markus Code</span>
         <div className="flex items-center sm:ml-2">
-          <span className="text-3xl font-bold text-white" style={{ color: '#ffc857', marginRight: '5px' }}>Premium</span>
+          <span
+            className="text-3xl font-bold text-white"
+            style={{ color: "#ffc857", marginRight: "5px" }}
+          >
+            Premium
+          </span>
           <Crown color="#ffc857" size={32} />
         </div>
       </h1>
-      <p className="text-gray-300 mb-8">Unlock exclusive features and enhance your web app building experience.</p>
+      <p className="text-gray-300 mb-8">
+        Unlock exclusive features and enhance your web app building experience.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Free Plan */}
@@ -50,17 +57,25 @@ const GetPremium = () => {
             <li>Limited Collaboration Features</li>
             <li>Watermarked Exports</li>
           </ul>
-          <button className="w-full py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">Already Activated</button>
+          <button className="w-full py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+            Already Activated
+          </button>
         </div>
 
         {/* Standard Plan */}
         <div className="bg-dark-700 rounded-2xl shadow-lg p-6 border border-dark-600">
           <div className="flex items-center mb-2">
             <h2 className="text-2xl font-semibold text-white mr-2">Standard</h2>
-            <span className="bg-yellow-500 text-white text-xs font-semibold rounded-full px-2 py-1">Popular</span>
+            <span className="bg-yellow-500 text-white text-xs font-semibold rounded-full px-2 py-1">
+              Popular
+            </span>
           </div>
-          <p className="text-gray-300 mb-4">Enhanced features for serious web app builders.</p>
-          <div className="text-4xl font-bold text-primary-500 mb-4">₹299/month</div>
+          <p className="text-gray-300 mb-4">
+            Enhanced features for serious web app builders.
+          </p>
+          <div className="text-4xl font-bold text-primary-500 mb-4">
+            ₹299/month
+          </div>
           <ul className="list-disc list-inside text-gray-300 mb-4">
             <li>AI Code Generation: Increased Limit</li>
             <li>Project Storage: Increased Limit</li>
@@ -74,14 +89,20 @@ const GetPremium = () => {
             <li>Enhanced Collaboration Features</li>
             <li>Standard Analytics Dashboard</li>
           </ul>
-          <button className="w-full py-2 px-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">Get Started</button>
+          <button className="w-full py-2 px-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
+            Get Started
+          </button>
         </div>
 
         {/* Premium Plan */}
         <div className="bg-dark-700 rounded-2xl shadow-lg p-6 border border-dark-600">
           <h2 className="text-2xl font-semibold text-white mb-2">Premium</h2>
-          <p className="text-gray-300 mb-4">The ultimate web app building experience.</p>
-          <div className="text-4xl font-bold text-primary-500 mb-4">₹499/month</div>
+          <p className="text-gray-300 mb-4">
+            The ultimate web app building experience.
+          </p>
+          <div className="text-4xl font-bold text-primary-500 mb-4">
+            ₹499/month
+          </div>
           <ul className="list-disc list-inside text-gray-300 mb-4">
             <li>Unlimited AI Code Generation</li>
             <li>Unlimited Project Storage</li>
@@ -95,7 +116,9 @@ const GetPremium = () => {
             <li>Advanced Collaboration Features</li>
             <li>Customizable Analytics Dashboard</li>
           </ul>
-          <button className="w-full py-2 px-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">Get Started</button>
+          <button className="w-full py-2 px-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
+            Get Started
+          </button>
         </div>
       </div>
     </motion.div>
