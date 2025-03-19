@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Code, ChevronUp, Menu } from 'lucide-react';
-import Sidebar from './Sidebar';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Code, ChevronUp, Menu } from "lucide-react";
+import Sidebar from "./Sidebar";
+import { Link, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const showLogo = location.pathname === '/';
+  const showLogo = location.pathname === "/";
 
   return (
     <>
@@ -38,30 +38,30 @@ const Header: React.FC = () => {
           </motion.button>
           {!showLogo && (
             <Link to="/" className="hidden md:flex items-center gap-2">
-              <motion.div
-                className="flex items-center gap-2"
-              >
+              <motion.div className="flex items-center gap-2">
                 <div className="p-2 bg-primary-600 rounded-lg">
                   <Code size={24} className="text-white" />
                 </div>
                 <div>
                   <h1 className="text-xl font-bold">Markus Code</h1>
-                  <p className="text-xs text-gray-400">AI-Powered Web App Builder</p>
+                  <p className="text-xs text-gray-400">
+                    AI-Powered Web App Builder
+                  </p>
                 </div>
               </motion.div>
             </Link>
           )}
           {showLogo && (
             <Link to="/" className="flex items-center gap-2">
-              <motion.div
-                className="flex items-center gap-2"
-              >
+              <motion.div className="flex items-center gap-2">
                 <div className="p-2 bg-primary-600 rounded-lg">
                   <Code size={24} className="text-white" />
                 </div>
                 <div>
                   <h1 className="text-xl font-bold">Markus Code</h1>
-                  <p className="text-xs text-gray-400">AI-Powered Web App Builder</p>
+                  <p className="text-xs text-gray-400">
+                    AI-Powered Web App Builder
+                  </p>
                 </div>
               </motion.div>
             </Link>
