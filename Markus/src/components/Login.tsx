@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate, Link } from 'react-router-dom';
-import { Key, User, ArrowLeft, Code } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useNavigate, Link } from "react-router-dom";
+import { Key, User, ArrowLeft, Code } from "lucide-react";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate login
-    console.log('Logging in with:', { email, password });
-    navigate('/generate');
+    console.log("Logging in with:", { email, password });
+    navigate("/generate");
   };
 
   const containerVariants = {
@@ -23,9 +23,9 @@ const Login = () => {
       transition: {
         duration: 0.7,
         delay: 0.1,
-        ease: [0.43, 0.13, 0.23, 0.96]
-      }
-    }
+        ease: [0.43, 0.13, 0.23, 0.96],
+      },
+    },
   };
 
   const inputVariants = {
@@ -35,18 +35,18 @@ const Login = () => {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: [0.43, 0.13, 0.23, 0.96]
-      }
-    }
+        ease: [0.43, 0.13, 0.23, 0.96],
+      },
+    },
   };
 
   const buttonVariants = {
     hover: {
       scale: 1.03,
       boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-      transition: { duration: 0.2 }
+      transition: { duration: 0.2 },
     },
-    tap: { scale: 0.98 }
+    tap: { scale: 0.98 },
   };
 
   return (
@@ -58,7 +58,7 @@ const Login = () => {
         animate="visible"
       >
         <motion.button
-          onClick={() => navigate('/')}
+          onClick={() => navigate("/")}
           className="text-gray-400 hover:text-white transition-colors absolute top-4 left-4 flex items-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -67,11 +67,13 @@ const Login = () => {
           <span>Go Back</span>
         </motion.button>
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-white">
-            Sign in
-          </h2>
+          <h2 className="text-3xl font-extrabold text-white">Sign in</h2>
           <p className="mt-2 text-sm text-gray-400">
-            Or <Link to="/register" className="font-medium text-primary-500 hover:text-primary-400">
+            Or{" "}
+            <Link
+              to="/register"
+              className="font-medium text-primary-500 hover:text-primary-400"
+            >
               create a new account
             </Link>
           </p>
