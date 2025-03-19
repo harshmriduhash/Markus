@@ -1,7 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, ChevronUp, Menu, GraduationCap, Bot, Pencil, Crown, LogOut } from 'lucide-react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Code,
+  ChevronUp,
+  Menu,
+  GraduationCap,
+  Bot,
+  Pencil,
+  Crown,
+  LogOut,
+} from "lucide-react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -13,15 +22,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     open: {
       x: 0,
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 200,
         damping: 20,
       },
     },
     closed: {
-      x: '-100%',
+      x: "-100%",
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 200,
         damping: 20,
       },
@@ -31,18 +40,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const overlayVariants = {
     open: {
       opacity: 1,
-      pointerEvents: 'auto',
+      pointerEvents: "auto",
     },
     closed: {
       opacity: 0,
-      pointerEvents: 'none',
+      pointerEvents: "none",
     },
   };
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate('/');
+    navigate("/");
     onClose();
   };
 
@@ -52,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <motion.div
         className="fixed inset-0 bg-black/50 z-40"
         variants={overlayVariants}
-        animate={isOpen ? 'open' : 'closed'}
+        animate={isOpen ? "open" : "closed"}
         onClick={onClose}
       />
 
@@ -60,7 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <motion.aside
         className="fixed top-0 left-0 h-full w-64 bg-dark-800 border-r border-dark-700 z-50 shadow-lg"
         variants={sidebarVariants}
-        animate={isOpen ? 'open' : 'closed'}
+        animate={isOpen ? "open" : "closed"}
       >
         <div className="p-4">
           <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2 pb-4">
@@ -72,7 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               to="/generate"
               className={({ isActive }) =>
                 `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? 'bg-primary-600 text-white' : 'text-gray-400'
+                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
@@ -84,7 +93,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               to="/code-editor"
               className={({ isActive }) =>
                 `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? 'bg-primary-600 text-white' : 'text-gray-400'
+                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
@@ -96,7 +105,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               to="/learn-to-code"
               className={({ isActive }) =>
                 `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? 'bg-primary-600 text-white' : 'text-gray-400'
+                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
@@ -108,7 +117,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               to="/premium"
               className={({ isActive }) =>
                 `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? 'bg-primary-600 text-white' : 'text-gray-400'
+                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
@@ -121,7 +130,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <motion.button
             onClick={handleLogout}
             className="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 text-red-500 mt-3 w-full justify-start"
-            whileHover={{ backgroundColor: 'rgba(255, 0, 0, 0.1)' }}
+            whileHover={{ backgroundColor: "rgba(255, 0, 0, 0.1)" }}
           >
             <LogOut size={16} />
             <span>Logout</span>
