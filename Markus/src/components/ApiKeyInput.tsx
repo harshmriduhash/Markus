@@ -38,7 +38,7 @@ const ApiKeyInput: React.FC = () => {
         </button>
       </div>
       <p className="text-xs text-gray-500 mt-2">
-        Your API key is stored locally and never sent to our servers.
+        Your API key is stored locally and will never be sent to our servers.
       </p>
     </motion.div>
   );
