@@ -6,7 +6,6 @@ import { Eye, EyeOff, Key } from "lucide-react";
 const ApiKeyInput: React.FC = () => {
   const { apiKey, setApiKey, selectedModel } = useAppStore();
   const [showKey, setShowKey] = useState(false);
-
   const toggleShowKey = () => setShowKey(!showKey);
 
   return (
