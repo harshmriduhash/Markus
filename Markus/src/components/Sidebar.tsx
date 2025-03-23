@@ -80,8 +80,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <NavLink
               to="/generate"
               className={({ isActive }) =>
-                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
+                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
@@ -92,8 +91,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <NavLink
               to="/code-editor"
               className={({ isActive }) =>
-                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
+                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
@@ -104,8 +102,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <NavLink
               to="/learn-to-code"
               className={({ isActive }) =>
-                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
+                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
@@ -116,8 +113,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <NavLink
               to="/premium"
               className={({ isActive }) =>
-                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${
-                  isActive ? "bg-primary-600 text-white" : "text-gray-400"
+                `flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-dark-700 ${isActive ? "bg-primary-600 text-white" : "text-gray-400"
                 }`
               }
               onClick={onClose}
