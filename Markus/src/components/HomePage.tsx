@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Code, ChevronRight, Github, LogIn, UserPlus, Sparkles, Zap, Layers, ArrowRight, Menu } from 'lucide-react';
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  Code,
+  ChevronRight,
+  Github,
+  LogIn,
+  UserPlus,
+  Sparkles,
+  Zap,
+  Layers,
+  ArrowRight,
+  Menu,
+} from "lucide-react";
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleTryNow = () => {
-    navigate('/login');
+    navigate("/login");
   };
 
   const toggleMobileMenu = () => {
@@ -22,9 +33,9 @@ const HomePage: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -32,8 +43,8 @@ const HomePage: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: 'spring', stiffness: 100 }
-    }
+      transition: { type: "spring", stiffness: 100 },
+    },
   };
 
   const featureCardVariants = {
@@ -42,28 +53,28 @@ const HomePage: React.FC = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         damping: 15,
         stiffness: 100,
-        delay: 0.2 + (i * 0.1)
-      }
-    })
+        delay: 0.2 + i * 0.1,
+      },
+    }),
   };
 
   const buttonHoverVariants = {
     hover: {
       scale: 1.05,
-      boxShadow: '0 10px 25px -5px rgba(14, 165, 233, 0.4)',
-      transition: { type: 'spring', stiffness: 400, damping: 10 }
+      boxShadow: "0 10px 25px -5px rgba(14, 165, 233, 0.4)",
+      transition: { type: "spring", stiffness: 400, damping: 10 },
     },
-    tap: { scale: 0.95 }
+    tap: { scale: 0.95 },
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 text-white overflow-x-hidden">
       {/* Header */}
       <header className="py-4 px-6 md:px-12 flex justify-between items-center">
-        <motion.div 
+        <motion.div
           className="flex items-center gap-2"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -78,29 +89,29 @@ const HomePage: React.FC = () => {
             <Menu size={24} />
           </motion.button>
           <Link to="/" className="flex items-center gap-2">
-            <motion.div
-              className="flex items-center gap-2"
-            >
+            <motion.div className="flex items-center gap-2">
               <div className="p-2 bg-primary-600 rounded-lg">
                 <Code size={20} className="text-white" />
               </div>
               <div>
                 <h1 className="text-lg font-bold sm:text-xl">Markus Code</h1>
-                <p className="text-xs text-gray-400">AI-Powered Web App Builder</p>
+                <p className="text-xs text-gray-400">
+                  AI-Powered Web App Builder
+                </p>
               </div>
             </motion.div>
           </Link>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="hidden md:flex items-center gap-3 bg-dark-800 p-1.5 rounded-full border border-dark-700"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <motion.a 
-            href="https://github.com" 
-            target="_blank" 
+          <motion.a
+            href="https://github.com"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors"
             whileHover={{ y: -2 }}
@@ -108,16 +119,16 @@ const HomePage: React.FC = () => {
             <Github size={16} />
             <span className="hidden sm:inline">GitHub</span>
           </motion.a>
-          <motion.a 
-            href="/login" 
+          <motion.a
+            href="/login"
             className="flex items-center gap-1.5 px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors"
             whileHover={{ y: -2 }}
           >
             <LogIn size={16} />
             <span className="hidden sm:inline">Login</span>
           </motion.a>
-          <motion.a 
-            href="/register" 
+          <motion.a
+            href="/register"
             className="flex items-center gap-1.5 px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-500 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -131,7 +142,7 @@ const HomePage: React.FC = () => {
       {/* Mobile Menu */}
       <motion.div
         className={`fixed top-0 left-0 h-full w-64 bg-dark-800 border-r border-dark-700 z-50 shadow-lg transform ${
-          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden`}
       >
         <div className="p-4">
@@ -182,14 +193,14 @@ const HomePage: React.FC = () => {
       )}
 
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         className="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto text-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         <motion.div variants={itemVariants}>
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-2 px-4 py-2 bg-dark-700 rounded-full text-sm text-primary-400 mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -200,22 +211,22 @@ const HomePage: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400"
           variants={itemVariants}
         >
           Build Web Apps with AI in Minutes
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           className="text-xl text-gray-300 max-w-3xl mx-auto mb-10"
           variants={itemVariants}
         >
-          Transform your ideas into fully functional web applications with just a text prompt. 
-          No coding required. Modern, clean UI by default.
+          Transform your ideas into fully functional web applications with just
+          a text prompt. No coding required. Modern, clean UI by default.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           variants={itemVariants}
         >
@@ -227,9 +238,12 @@ const HomePage: React.FC = () => {
             whileTap="tap"
           >
             <span>Try Now</span>
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight
+              size={18}
+              className="group-hover:translate-x-1 transition-transform"
+            />
           </motion.button>
-          
+
           <motion.a
             href="#features"
             className="px-8 py-4 bg-dark-700 border border-dark-600 rounded-lg text-white font-medium flex items-center justify-center gap-2 group"
@@ -238,7 +252,10 @@ const HomePage: React.FC = () => {
             whileTap="tap"
           >
             <span>Learn More</span>
-            <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <ChevronRight
+              size={18}
+              className="group-hover:translate-x-1 transition-transform"
+            />
           </motion.a>
         </motion.div>
 
@@ -251,28 +268,28 @@ const HomePage: React.FC = () => {
         >
           <div className="flex flex-col sm:flex-row">
             <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-dark-700 w-full sm:w-1/3 aspect-video mb-4 sm:mb-0">
-              <img 
-                src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80" 
-                alt="Markus Code App Interface" 
+              <img
+                src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Markus Code App Interface"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-dark-700 w-full sm:w-1/3 ml-0 sm:ml-4 aspect-video mb-4 sm:mb-0">
-              <img 
-                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80" 
-                alt="Markus Code App Interface" 
+              <img
+                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Markus Code App Interface"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-dark-700 w-full sm:w-1/3 ml-0 sm:ml-4 aspect-video">
-              <img 
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80" 
-                alt="Markus Code App Interface" 
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Markus Code App Interface"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
-          
+
           {/* Decorative elements */}
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary-600 opacity-10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary-600 opacity-10 rounded-full blur-3xl"></div>
@@ -281,16 +298,19 @@ const HomePage: React.FC = () => {
 
       {/* Features Section */}
       <section id="features" className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Powerful Features
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Everything you need to build web applications without writing a single line of code.
+            Everything you need to build web applications without writing a
+            single line of code.
           </p>
         </motion.div>
 
@@ -299,33 +319,39 @@ const HomePage: React.FC = () => {
             {
               icon: <Code className="text-primary-500" size={24} />,
               title: "Multiple AI Models",
-              description: "Choose from GPT-4, Claude 3, Gemini Pro, and more to power your web app generation."
+              description:
+                "Choose from GPT-4, Claude 3, Gemini Pro, and more to power your web app generation.",
             },
             {
               icon: <Sparkles className="text-primary-500" size={24} />,
               title: "Modern UI by Default",
-              description: "All generated applications come with clean, responsive, and modern user interfaces."
+              description:
+                "All generated applications come with clean, responsive, and modern user interfaces.",
             },
             {
               icon: <Zap className="text-primary-500" size={24} />,
               title: "Instant Preview",
-              description: "See your web application come to life in real-time with our built-in preview."
+              description:
+                "See your web application come to life in real-time with our built-in preview.",
             },
             {
               icon: <Layers className="text-primary-500" size={24} />,
               title: "Complete Project Files",
-              description: "Get all the HTML, CSS, and JavaScript files needed for your web application."
+              description:
+                "Get all the HTML, CSS, and JavaScript files needed for your web application.",
             },
             {
               icon: <Code className="text-primary-500" size={24} />,
               title: "Code Transparency",
-              description: "View and understand the generated code with syntax highlighting."
+              description:
+                "View and understand the generated code with syntax highlighting.",
             },
             {
               icon: <Sparkles className="text-primary-500" size={24} />,
               title: "Generation Process",
-              description: "Watch the AI build your application step by step with detailed progress updates."
-            }
+              description:
+                "Watch the AI build your application step by step with detailed progress updates.",
+            },
           ].map((feature, i) => (
             <motion.div
               key={i}
@@ -348,7 +374,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         className="py-20 px-6 md:px-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -359,16 +385,19 @@ const HomePage: React.FC = () => {
           {/* Decorative elements */}
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-primary-600 opacity-10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-secondary-600 opacity-10 rounded-full blur-3xl"></div>
-          
+
           <div className="relative z-10">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Build Your Web App?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Build Your Web App?
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start creating beautiful, functional web applications in minutes with the power of AI.
+                Start creating beautiful, functional web applications in minutes
+                with the power of AI.
               </p>
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               variants={itemVariants}
             >
@@ -380,9 +409,12 @@ const HomePage: React.FC = () => {
                 whileTap="tap"
               >
                 <span>Try Now</span>
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
               </motion.button>
-              
+
               <motion.a
                 href="https://github.com"
                 target="_blank"
@@ -409,19 +441,41 @@ const HomePage: React.FC = () => {
             </div>
             <div>
               <h2 className="text-lg font-bold">Markus Code</h2>
-              <p className="text-xs text-gray-400">© 2025 All rights reserved</p>
+              <p className="text-xs text-gray-400">
+                © 2025 All rights reserved
+              </p>
             </div>
           </div>
-          
+
           <div className="flex gap-8">
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Terms</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Documentation</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
+            <a
+              href="#"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Privacy
+            </a>
+            <a
+              href="#"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Terms
+            </a>
+            <a
+              href="#"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Documentation
+            </a>
+            <a
+              href="#"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Contact
+            </a>
           </div>
         </div>
-      </footer >
-    </div >
+      </footer>
+    </div>
   );
 };
 
